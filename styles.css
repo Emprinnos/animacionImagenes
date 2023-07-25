@@ -1,0 +1,63 @@
+body {
+  height: 100vh;
+  background: #3f3f3f;
+  display: grid;
+  place-items: center;
+}
+
+/* LA SECCION PRINCIPAL PARA ORGANIZAR LAS IMAGENES  */
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ESTILOS PARA EL CONTENEDOR DE LA IMAGEN  */
+.principal div {
+  margin: 1rem;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* ESTILOS PARA QUE UNA IMAGEN SEA RESPONSIVE  */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* EFECTO ZOOM SIMPLE  */
+.zoom-basico:hover img {
+  transform: scale(1.5);
+}
+
+.zoom-basico img {
+  transition: transform 0.5s ease-in-out;
+}
+/* EFECTO ZOOM CON ROTACION  */
+.zoom-rotacion:hover img {
+  transform: scale(2.2) rotate(30deg);
+}
+.zoom-rotacion img {
+  transition: transform 0.5s ease-in-out;
+}
+/*EFECTO ZOOM VERTICAL*/
+.zoom-vertical:hover img {
+  transform: scale(1.3) translateY(-20%);
+}
+.zoom-vertical img {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.6);
+  transform-origin: top left;
+}
+/* EFECTO BONUS  */
+
+.zoom-color:hover img {
+  filter: grayscale(0);
+  transform: scale(1.5);
+}
+
+.zoom-color img {
+  transition: transform 0.5s, filter 1s ease-in-out;
+  filter: grayscale(100%);
+}
